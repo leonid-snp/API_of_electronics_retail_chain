@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from electronics_network.models import Contact, Product, Factory
+from electronics_network.models import Contact, Product, Factory, RetailChain
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -41,4 +41,42 @@ class FactoryRetrieveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Factory
         fields = ('id', 'name', 'contacts', 'products', 'supplier', 'dept', 'creation_time')
-        depth = 1
+        depth = 2
+
+
+class FactoryUpdateSerializer(serializers.ModelSerializer):
+    """
+    Обработка модели `Завод` для редактирования.
+    """
+    class Meta:
+        model = Factory
+        fields = ('id', 'name', 'contacts', 'products', 'supplier')
+
+
+class RetailChainSerializer(serializers.ModelSerializer):
+    """
+    Обработка модели `Розничная сеть` для общего просмотра.
+    """
+    class Meta:
+        model = RetailChain
+        fields = ('id', 'name', 'contacts', 'products')
+
+
+class RetailChainRetrieveSerializer(serializers.ModelSerializer):
+    """
+    Обработка модели `Розничная сеть` для детального просмотра.
+    """
+
+    class Meta:
+        model = RetailChain
+        fields = ('id', 'name', 'contacts', 'products', 'supplier', 'dept', 'creation_time')
+        depth = 2
+
+class RetailChainUpdateSerializer(serializers.ModelSerializer):
+    """
+    Обработка модели `Розничная сеть` для редактирования
+    """
+    class Meta:
+        model = RetailChain
+        fields = ('id', 'name', 'contacts', 'products', 'supplier')
+

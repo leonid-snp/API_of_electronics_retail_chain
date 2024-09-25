@@ -1,8 +1,10 @@
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
 
-from electronics_network.models import Contact, Product, Factory
+from electronics_network.models import Contact, Product, Factory, RetailChain
 from electronics_network.serializers import (ContactSerializer,
-                                             ProductSerializer, FactorySerializer, FactoryRetrieveSerializer)
+                                             ProductSerializer, FactorySerializer, FactoryRetrieveSerializer,
+                                             RetailChainSerializer, RetailChainRetrieveSerializer,
+                                             FactoryUpdateSerializer, RetailChainUpdateSerializer)
 
 
 class ContactCreateAPIView(CreateAPIView):
@@ -42,7 +44,7 @@ class FactoryUpdateAPIView(UpdateAPIView):
     Класс представления редактирования завода.
     """
     queryset = Factory.objects.all()
-    serializer_class = FactorySerializer
+    serializer_class = FactoryUpdateSerializer
 
 
 class FactoryDestroyAPIView(DestroyAPIView):
@@ -59,3 +61,27 @@ class FactoryListAPIView(ListAPIView):
     """
     queryset = Factory.objects.all()
     serializer_class = FactorySerializer
+
+
+class RetailChainCreateAPIView(CreateAPIView):
+    """
+    Класс представления создания розничной сети.
+    """
+    queryset = RetailChain.objects.all()
+    serializer_class = RetailChainSerializer
+
+
+class RetailChainRetrieveAPIView(RetrieveAPIView):
+    """
+    Класс представления просмотра розничной сети.
+    """
+    queryset = RetailChain.objects.all()
+    serializer_class = RetailChainRetrieveSerializer
+
+
+class RetailChainUpdateAPIView(UpdateAPIView):
+    """
+    Класс представления редактирования розничной сети.
+    """
+    queryset = RetailChain.objects.all()
+    serializer_class = RetailChainUpdateSerializer
