@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from electronics_network.models import Factory, RetailChain, Entrepreneur
+from electronics_network.models import Entrepreneur, Factory, RetailChain
 
 
 @admin.register(Factory)

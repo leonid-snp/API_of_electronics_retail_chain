@@ -1,4 +1,5 @@
 from django.db import models
+
 from config.settings import NULLABLE
 
 
@@ -93,15 +94,17 @@ class DataMixin(models.Model):
         verbose_name='Продукты',
         help_text='Введите продукты'
     )
-    dept = models.PositiveIntegerField(
+    dept = models.DecimalField(
+        default=0,
+        max_digits=8,
+        decimal_places=2,
         verbose_name='Задолженность',
-        help_text='Введите задолженность перед поставщиком',
-        **NULLABLE
+        help_text='Введите задолженность перед поставщиком'
     )
     creation_time = models.DateTimeField(
+        auto_now_add=True,
         verbose_name='Время',
-        help_text='Введите время создания',
-        **NULLABLE
+        help_text='Введите время создания'
     )
 
     def __str__(self):
