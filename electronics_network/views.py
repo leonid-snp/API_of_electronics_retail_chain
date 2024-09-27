@@ -1,10 +1,12 @@
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
 
-from electronics_network.models import Contact, Product, Factory, RetailChain
+from electronics_network.models import Contact, Product, Factory, RetailChain, Entrepreneur
 from electronics_network.serializers import (ContactSerializer,
                                              ProductSerializer, FactorySerializer, FactoryRetrieveSerializer,
                                              RetailChainSerializer, RetailChainRetrieveSerializer,
-                                             FactoryUpdateSerializer, RetailChainUpdateSerializer)
+                                             FactoryUpdateSerializer, RetailChainUpdateSerializer,
+                                             EntrepreneurSerializer, EntrepreneurRetrieveSerializer,
+                                             EntrepreneurUpdateSerializer)
 
 
 class ContactCreateAPIView(CreateAPIView):
@@ -63,6 +65,46 @@ class FactoryListAPIView(ListAPIView):
     serializer_class = FactorySerializer
 
 
+class EntrepreneurCreateAPIView(CreateAPIView):
+    """
+    Класс представления создания предпринимателя.
+    """
+    queryset = Entrepreneur.objects.all()
+    serializer_class = EntrepreneurSerializer
+
+
+class EntrepreneurRetrieveAPIView(RetrieveAPIView):
+    """
+    Класс представления детального просмотра предпринимателя.
+    """
+    queryset = Entrepreneur.objects.all()
+    serializer_class = EntrepreneurRetrieveSerializer
+
+
+class EntrepreneurUpdateAPIView(UpdateAPIView):
+    """
+    Класс представления редактирования предпринимателя.
+    """
+    queryset = Entrepreneur.objects.all()
+    serializer_class = EntrepreneurUpdateSerializer
+
+
+class EntrepreneurDestroyAPIView(DestroyAPIView):
+    """
+    Класс представления удаления предпринимателя.
+    """
+    queryset = Entrepreneur.objects.all()
+    serializer_class = EntrepreneurSerializer
+
+
+class EntrepreneurListAPIView(ListAPIView):
+    """
+    Класс представления вывода списка предпринимателей.
+    """
+    queryset = Entrepreneur.objects.all()
+    serializer_class = EntrepreneurSerializer
+
+
 class RetailChainCreateAPIView(CreateAPIView):
     """
     Класс представления создания розничной сети.
@@ -85,3 +127,19 @@ class RetailChainUpdateAPIView(UpdateAPIView):
     """
     queryset = RetailChain.objects.all()
     serializer_class = RetailChainUpdateSerializer
+
+
+class RetailChainDestroyAPIView(DestroyAPIView):
+    """
+    Класс представления удаления розничной сети.
+    """
+    queryset = RetailChain.objects.all()
+    serializer_class = RetailChainSerializer
+
+
+class RetailChainListAPIView(ListAPIView):
+    """
+    Класс представления вывода списка розничных сетей.
+    """
+    queryset = RetailChain.objects.all()
+    serializer_class = RetailChainSerializer

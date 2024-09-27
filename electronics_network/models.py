@@ -111,12 +111,22 @@ class DataMixin(models.Model):
         return self.name
 
 
+class Factory(DataMixin):
+    """
+    Модель `Завод` - завод производитель.
+    """
+
+    class Meta:
+        verbose_name = 'Завод'
+        verbose_name_plural = 'Заводы'
+
+
 class Entrepreneur(DataMixin):
     """
     Модель `Индивидуальный предприниматель`.
     """
     supplier = models.ForeignKey(
-        'RetailChain',
+        Factory,
         on_delete=models.SET_NULL,
         verbose_name='Поставщик',
         help_text='Введите поставщика',
@@ -143,20 +153,3 @@ class RetailChain(DataMixin):
     class Meta:
         verbose_name = 'Розничная сеть'
         verbose_name_plural = 'Розничные сети'
-
-
-class Factory(DataMixin):
-    """
-    Модель `Завод` - завод производитель.
-    """
-    supplier = models.ForeignKey(
-        RetailChain,
-        on_delete=models.SET_NULL,
-        verbose_name='Поставщик',
-        help_text='Введите поставщика',
-        **NULLABLE
-    )
-
-    class Meta:
-        verbose_name = 'Завод'
-        verbose_name_plural = 'Заводы'
