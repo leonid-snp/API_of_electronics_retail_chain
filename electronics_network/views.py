@@ -1,12 +1,20 @@
-from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView, ListAPIView
+from rest_framework.generics import (CreateAPIView, DestroyAPIView,
+                                     ListAPIView, RetrieveAPIView,
+                                     UpdateAPIView)
 
-from electronics_network.models import Contact, Product, Factory, RetailChain, Entrepreneur
+from electronics_network.models import (Contact, Entrepreneur, Factory,
+                                        Product, RetailChain)
 from electronics_network.serializers import (ContactSerializer,
-                                             ProductSerializer, FactorySerializer, FactoryRetrieveSerializer,
-                                             RetailChainSerializer, RetailChainRetrieveSerializer,
-                                             FactoryUpdateSerializer, RetailChainUpdateSerializer,
-                                             EntrepreneurSerializer, EntrepreneurRetrieveSerializer,
-                                             EntrepreneurUpdateSerializer)
+                                             EntrepreneurRetrieveSerializer,
+                                             EntrepreneurSerializer,
+                                             EntrepreneurUpdateSerializer,
+                                             FactoryRetrieveSerializer,
+                                             FactorySerializer,
+                                             FactoryUpdateSerializer,
+                                             ProductSerializer,
+                                             RetailChainRetrieveSerializer,
+                                             RetailChainSerializer,
+                                             RetailChainUpdateSerializer)
 
 
 class ContactCreateAPIView(CreateAPIView):

@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from electronics_network.models import Contact, Product, Factory, RetailChain, Entrepreneur
+from electronics_network.models import (Contact, Entrepreneur, Factory,
+                                        Product, RetailChain)
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -40,7 +41,7 @@ class FactoryRetrieveSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Factory
-        fields = ('id', 'name', 'contacts', 'products', 'supplier', 'dept', 'creation_time')
+        fields = ('id', 'name', 'contacts', 'products', 'creation_time')
         depth = 1
 
 
@@ -61,7 +62,7 @@ class EntrepreneurSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Entrepreneur
-        fields = ('id', 'name', 'contacts', 'products')
+        fields = ('id', 'name', 'contacts', 'products', 'supplier')
 
 
 class EntrepreneurRetrieveSerializer(serializers.ModelSerializer):

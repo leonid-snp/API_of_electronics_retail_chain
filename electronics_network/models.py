@@ -96,6 +96,7 @@ class DataMixin(models.Model):
     )
     dept = models.DecimalField(
         default=0,
+        editable=False,
         max_digits=8,
         decimal_places=2,
         verbose_name='Задолженность',
@@ -115,6 +116,8 @@ class Factory(DataMixin):
     """
     Модель `Завод` - завод производитель.
     """
+
+    dept = None
 
     class Meta:
         verbose_name = 'Завод'

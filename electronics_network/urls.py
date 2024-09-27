@@ -2,12 +2,22 @@ from django.urls import path
 
 from electronics_network.apps import ElectronicsNetworkConfig
 from electronics_network.views import (ContactCreateAPIView,
-                                       ProductCreateAPIView, FactoryCreateAPIView, FactoryRetrieveAPIView,
-                                       FactoryUpdateAPIView, FactoryDestroyAPIView, FactoryListAPIView,
-                                       RetailChainCreateAPIView, RetailChainRetrieveAPIView, RetailChainUpdateAPIView,
-                                       RetailChainDestroyAPIView, RetailChainListAPIView, EntrepreneurCreateAPIView,
-                                       EntrepreneurRetrieveAPIView, EntrepreneurUpdateAPIView,
-                                       EntrepreneurDestroyAPIView, EntrepreneurListAPIView)
+                                       EntrepreneurCreateAPIView,
+                                       EntrepreneurDestroyAPIView,
+                                       EntrepreneurListAPIView,
+                                       EntrepreneurRetrieveAPIView,
+                                       EntrepreneurUpdateAPIView,
+                                       FactoryCreateAPIView,
+                                       FactoryDestroyAPIView,
+                                       FactoryListAPIView,
+                                       FactoryRetrieveAPIView,
+                                       FactoryUpdateAPIView,
+                                       ProductCreateAPIView,
+                                       RetailChainCreateAPIView,
+                                       RetailChainDestroyAPIView,
+                                       RetailChainListAPIView,
+                                       RetailChainRetrieveAPIView,
+                                       RetailChainUpdateAPIView)
 
 app_name = ElectronicsNetworkConfig.name
 
