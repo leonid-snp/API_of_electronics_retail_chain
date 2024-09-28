@@ -1,0 +1,308 @@
+[
+{
+    "model": "electronics_network.contact",
+    "pk": 1,
+    "fields": {
+        "email": "xiaomi@xiaomi.com",
+        "country": "Russia",
+        "city": "Moscow",
+        "street": "Lenina",
+        "house": 12
+    }
+},
+{
+    "model": "electronics_network.contact",
+    "pk": 2,
+    "fields": {
+        "email": "samsung@samsung.com",
+        "country": "Russia",
+        "city": "Moscow",
+        "street": "Pushkina",
+        "house": 32
+    }
+},
+{
+    "model": "electronics_network.contact",
+    "pk": 3,
+    "fields": {
+        "email": "honor@honor.com",
+        "country": "Russia",
+        "city": "St. Petersburg",
+        "street": "Lenina",
+        "house": 15
+    }
+},
+{
+    "model": "electronics_network.contact",
+    "pk": 4,
+    "fields": {
+        "email": "ivan@ivan.com",
+        "country": "Russia",
+        "city": "St. Petersburg",
+        "street": "Pushkina",
+        "house": 42
+    }
+},
+{
+    "model": "electronics_network.contact",
+    "pk": 5,
+    "fields": {
+        "email": "dns@dns.com",
+        "country": "Russia",
+        "city": "Moscow",
+        "street": "Mendeleeva",
+        "house": 15
+    }
+},
+{
+    "model": "electronics_network.contact",
+    "pk": 6,
+    "fields": {
+        "email": "sergei@sergei.com",
+        "country": "Russia",
+        "city": "Ufa",
+        "street": "Lenina",
+        "house": 15
+    }
+},
+{
+    "model": "electronics_network.contact",
+    "pk": 7,
+    "fields": {
+        "email": "mvideo@mvideo.com",
+        "country": "Russia",
+        "city": "Ufa",
+        "street": "Pushkina",
+        "house": 45
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 1,
+    "fields": {
+        "name": "Xiaomi",
+        "model": "13",
+        "release": "2024-10-10"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 2,
+    "fields": {
+        "name": "Xiaomi",
+        "model": "13 Pro",
+        "release": "2024-12-10"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 3,
+    "fields": {
+        "name": "Xiaomi",
+        "model": "14",
+        "release": "2025-06-10"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 4,
+    "fields": {
+        "name": "Samsung",
+        "model": "Galaxy 90",
+        "release": "2024-10-12"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 5,
+    "fields": {
+        "name": "Samsung",
+        "model": "Galaxy 200",
+        "release": "2025-07-12"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 6,
+    "fields": {
+        "name": "Samsung",
+        "model": "Galaxy 200 Pro",
+        "release": "2025-10-12"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 7,
+    "fields": {
+        "name": "Honor",
+        "model": "90",
+        "release": "2024-10-15"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 8,
+    "fields": {
+        "name": "Honor",
+        "model": "90 Ultra",
+        "release": "2024-12-15"
+    }
+},
+{
+    "model": "electronics_network.product",
+    "pk": 9,
+    "fields": {
+        "name": "Honor",
+        "model": "100",
+        "release": "2025-05-10"
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 1,
+    "fields": {
+        "name": "Xiaomi",
+        "contacts": 1,
+        "dept": "0.00",
+        "creation_time": "2024-09-27T05:59:52.165Z",
+        "products": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 2,
+    "fields": {
+        "name": "Samsung",
+        "contacts": 2,
+        "dept": "0.00",
+        "creation_time": "2024-09-27T06:03:42.257Z",
+        "products": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 3,
+    "fields": {
+        "name": "Honor",
+        "contacts": 3,
+        "dept": "0.00",
+        "creation_time": "2024-09-27T06:06:35.398Z",
+        "products": [
+            8,
+            9,
+            7
+        ]
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 4,
+    "fields": {
+        "name": "Ivan",
+        "contacts": 4,
+        "dept": "0.00",
+        "creation_time": "2024-09-27T06:11:00.822Z",
+        "products": [
+            8,
+            9,
+            7
+        ]
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 5,
+    "fields": {
+        "name": "DNS",
+        "contacts": 5,
+        "dept": "0.00",
+        "creation_time": "2024-09-27T06:14:58.531Z",
+        "products": [
+            8,
+            9,
+            7
+        ]
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 6,
+    "fields": {
+        "name": "Sergei",
+        "contacts": 6,
+        "dept": "15215.12",
+        "creation_time": "2024-09-28T01:56:44.584Z",
+        "products": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "electronics_network.datamixin",
+    "pk": 7,
+    "fields": {
+        "name": "Mvideo",
+        "contacts": 7,
+        "dept": "6545.45",
+        "creation_time": "2024-09-28T01:59:32.031Z",
+        "products": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "electronics_network.factory",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "electronics_network.factory",
+    "pk": 2,
+    "fields": {}
+},
+{
+    "model": "electronics_network.factory",
+    "pk": 3,
+    "fields": {}
+},
+{
+    "model": "electronics_network.entrepreneur",
+    "pk": 4,
+    "fields": {
+        "supplier": 3
+    }
+},
+{
+    "model": "electronics_network.entrepreneur",
+    "pk": 6,
+    "fields": {
+        "supplier": 2
+    }
+},
+{
+    "model": "electronics_network.retailchain",
+    "pk": 5,
+    "fields": {
+        "supplier": 4
+    }
+},
+{
+    "model": "electronics_network.retailchain",
+    "pk": 7,
+    "fields": {
+        "supplier": 6
+    }
+}
+]
