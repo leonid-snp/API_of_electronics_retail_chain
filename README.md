@@ -26,6 +26,15 @@ POSTGRES_PORT= порт
 - `docker compose up` или `sudo docker compose up`
 - можно одной командой
 - `docker compose up -d --build` или `sudo docker compose up -d --build`
+- после успешного создания контейнеров надо подключиться к контейнеру django
+- `docker exec -it django sh` или `sudo docker exec -it django sh`
+- провалимся внутрь контейнера в оболочку `sh` теперь создадим суперпользователя
+- `python3 manage.py createsuperuser`
+- заполните данные, и после успешного создания заполните базу данных тестовыми данными
+- `python3 manage.py loaddata db.json`
+- далее перейдите по ссылке http://0.0.0.0:8000/admin/ и войдите как админ в админ-панель
+- для выхода из контейнера введите команду
+- `exit`
 
 ### Перейдите по ссылке в браузере для просмотра документации
 - http://0.0.0.0:8000/redoc/
@@ -39,4 +48,7 @@ POSTGRES_PORT= порт
 
 ### Для остановки docker контейнера введите сочетание клавиш
 - ctrl+c
+- так же можно использовать команду
+- `docker compose down` или `sudo docker compose down`
+- вы выйдете из контейнера остановите все относящие к `docker compose` и удалите их автоматически
 
