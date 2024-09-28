@@ -52,7 +52,7 @@ class FactoryUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Factory
-        fields = ('id', 'name', 'contacts', 'products', 'supplier')
+        fields = ('id', 'name', 'contacts', 'products')
 
 
 class EntrepreneurSerializer(serializers.ModelSerializer):
@@ -93,7 +93,7 @@ class RetailChainSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = RetailChain
-        fields = ('id', 'name', 'contacts', 'products')
+        fields = ('id', 'name', 'contacts', 'products', 'supplier')
 
 
 class RetailChainRetrieveSerializer(serializers.ModelSerializer):
